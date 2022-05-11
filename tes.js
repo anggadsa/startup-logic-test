@@ -1,17 +1,15 @@
-function merge(arr) {
-    let mergeSort = arr;
-    let container = []
-    for( let i = 1; i< mergeSort.length; i++){
-        for(let j = 0; j < i; j++) {
-            if(mergeSort[i] < mergeSort[j]){
-                let number = mergeSort[i]
-                mergeSort[i] = mergeSort[j]
-                mergeSort[j] = number
-            }
-            
-        }
+function reverseNumber(number) {
+    if(isNaN(number) || typeof number == `string`)return (`This is not a number`)
+    let num = number
+    // console.log(typeof number)
+    let reverse = 0
+    let str = ``;
+    while (num > 0) {
+        reverse = num % 10  
+        str = str + reverse
+        num = Math.trunc(num / 10)
     }
 
-    return mergeSort
+    return +str
 }
-console.log(merge([3,2,1]))
+console.log(reverseNumber(12345));
