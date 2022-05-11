@@ -1,5 +1,6 @@
 /*
-**/
+
+// SOAL 1
 // ===============================
 function merge(l, r) {
     const arr1 = l
@@ -9,7 +10,7 @@ function merge(l, r) {
     return merge
 }
 console.log(merge([1,2,3], [4,5,6]))
-
+// Jawaban [ 1, 2, 3, 4, 5, 6 ]
 function mergeSort(arr) {
     let left = []
     let right = []
@@ -62,8 +63,9 @@ function mergeSort(arr) {
 }   
 const arr = [2, 7, 3, 6, 9, 4, 8];
 console.log(mergeSort(arr));
+// Jawaban [ 2, 3, 6, 7, 4, 8, 9 ]
 // ===============================
-
+// SOAL 2
 // // ===============================
 function isPrimeNumber(n) {
     if (n === 1) return (`Is not prime number`)
@@ -81,7 +83,7 @@ function isPrimeNumber(n) {
 }
 console.log(isPrimeNumber(11));
 // // ===============================
-
+// SOAL 3
 // // ===============================
 function reverseNumber(number) {
     // Kerjakan soal ini hanya menggunakan built-in yang berkaitan dengan Number (seperti Math) 
@@ -101,8 +103,8 @@ function reverseNumber(number) {
 }
 console.log(reverseNumber(12345));
 // // ===============================
-
 // Soal 4 
+// // ===============================
 function duplicateNumber (arr) {
     let duplicate = [];
     let duplicateIndex = 0;
@@ -135,16 +137,16 @@ function duplicateNumber (arr) {
             m = arr.length - 1
         }
     }
-
-    return highestIndex
+    let string = `Index ke ${highestIndex}`
+    return string
 }
 // arr = [1, 2, 2, 6, 4, 4]
 console.log(duplicateNumber([1, 2, 2, 6, 4, 4]))
 // jawaban = index ke - 4
 // cari di index berapa bilangan yang duplicate, jika ada lebh dari 1 yang duplicate ambil bilangan yang paling besar
-
-
+// // ===============================
 // Soal 5
+// // ===============================
 function includeString (stringA, stringB) {
     let firstIndex = 0;
     let result = 0;
@@ -177,27 +179,25 @@ stringB = 'uang'
 console.log(includeString(stringA, stringB))
 // jawaban = index ke 3
 // apakah value stringB ada di stringA, jika ada return index nya jika tidak return -1
-
+// // ===============================
+**/
 // Soal 6
+// // ===============================
 function pyramidAsterisk (arr){
     let string = ``;
     let reverse = ``;
-    // reverse 
-    for(let j = arr.length -1; j >= 0; j--) {
-        reverse = reverse + arr[j]
-    }
- 
-    
-    // V2
-    for(let i = 1; i <= reverse.length; i++) {
-        let decrement = reverse.length;
-        for(let j = 0; j < i; j++) {
-            decrement = decrement - 1
-            string = string + reverse[decrement]
+
+    for(let i = 1; i < arr.length +1; i++){ 
+        let tempString = ``; //temporary string container
+        for(let j = 0; j < i; j++){ 
+            tempString = tempString + arr[j]
+        }
+        
+        for(let k = tempString.length - 1; k >= 0; k--) { //reverse loop tempString ang assign to string variables
+            string = string + tempString[k]
         }
         string = string + `\n`
     }
-
 
     return string
 }
@@ -210,3 +210,4 @@ console.log(pyramidAsterisk([5, 4, 3, 2, 1]))
 // 3 4 5
 // 2 3 4 5
 // 1 2 3 4 5
+// // ===============================
