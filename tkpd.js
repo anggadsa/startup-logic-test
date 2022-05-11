@@ -1,4 +1,5 @@
 /*
+**/
 // ===============================
 function merge(l, r) {
     const arr1 = l
@@ -176,7 +177,6 @@ stringB = 'uang'
 console.log(includeString(stringA, stringB))
 // jawaban = index ke 3
 // apakah value stringB ada di stringA, jika ada return index nya jika tidak return -1
-**/
 
 // Soal 6
 function pyramidAsterisk (arr){
