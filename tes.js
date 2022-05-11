@@ -1,15 +1,25 @@
-function reverseNumber(number) {
-    if(isNaN(number) || typeof number == `string`)return (`This is not a number`)
-    let num = number
-    // console.log(typeof number)
-    let reverse = 0
-    let str = ``;
-    while (num > 0) {
-        reverse = num % 10  
-        str = str + reverse
-        num = Math.trunc(num / 10)
+function pyramidAsterisk (arr){
+    let string = ``;
+    let reverse = ``;
+    // reverse 
+    for(let j = arr.length -1; j >= 0; j--) {
+        reverse = reverse + arr[j]
+    }
+ 
+    
+    // V2
+    for(let i = 1; i <= reverse.length; i++) {
+        let decrement = reverse.length;
+        for(let j = 0; j < i; j++) {
+            decrement = decrement - 1
+            string = string + reverse[decrement]
+        }
+        string = string + `\n`
     }
 
-    return +str
+
+    return string
 }
-console.log(reverseNumber(12345));
+
+// arr = [5, 4, 3, 2, 1]
+console.log(pyramidAsterisk([5, 4, 3, 2, 1]))

@@ -12,3 +12,13 @@
 // Koinworks allow built-in function
 
 // [1, 3, 2, 6, 4, 1, 2, 7, 8, 10]
+
+/* 
+1. Menemukan angka yang tidak ada pada rentang dari number yang terkecil sampai yang terbesar pada sebuah array 
+[1, 3, 2, 6, 4, 1, 2, 7, 8, 10] berarti 1-10 yang tidak adalah angka 5
+2. Menemukan angka positip terkecil yang double pertama misall:
+[1, 3, 2, 6, 4, 1, 2, 7, 8, 10] berarti 2
+3. Ganti angka negatif menjadi positif misal:
+[-1, -3, 2, 6, 4, 1, 2, 7, 8, 10] menjadi [1, 3, 2, 6, 4, 1, 2, 7, 8, 10]
+
+**/
